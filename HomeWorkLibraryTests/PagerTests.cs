@@ -32,13 +32,13 @@ namespace HomeWorkLibrary.Tests
         }
 
         [TestMethod()]
-        public void getResult_3筆一組_取Cost總和()
+        public void getResult_3筆一組_取Cost總和_結果為6_15_24_21()
         {
             //arrange
             Pager target = new Pager();
 
             //act
-            List<int> actual = target.getResult(list, 3, Sum.Cost);
+            List<int> actual = target.getResult(list, 3, "Cost");
 
             //assert
             List<int> expected = new List<int> { 6, 15, 24, 21 };
@@ -47,13 +47,13 @@ namespace HomeWorkLibrary.Tests
         }
 
         [TestMethod()]
-        public void getResult_4筆一組_取Revenue總和()
+        public void getResult_4筆一組_取Revenue總和_結果為_50_66_60()
         {
             //aarange
             Pager target = new Pager();
 
             //act
-            var actual = target.getResult(list, 4, Sum.Revenue);
+            var actual = target.getResult(list, 4, "Revenue");
 
             //assert
             List<int> expected = new List<int> { 50, 66, 60 };

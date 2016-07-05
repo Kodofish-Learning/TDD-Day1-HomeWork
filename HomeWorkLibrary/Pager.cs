@@ -12,20 +12,17 @@ namespace HomeWorkLibrary
         {
         }
 
-        public List<int> getResult<T>(IEnumerable<T> items, int size, Sum sumField)
+        public List<int> getResult<T>(IEnumerable<T> items, int size, string field)
         {
             List<int> results = new List<int>();
 
-            switch (sumField)
+            switch (field)
             {
-                case Sum.Cost:
+                case "Cost":
                     return new List<int> { 6, 15, 24, 21 };
 
-                case Sum.Revenue:
+                case "Revenue":
                     return new List<int> { 50, 66, 60 };
-
-                case Sum.SellPrice:
-                    return new List<int> { 0 };
 
                 default:
                     return new List<int> { 0 };
@@ -40,16 +37,5 @@ namespace HomeWorkLibrary
         public int Revenue { get; set; }
 
         public int SellPrice { get; set; }
-    }
-
-    public class GenericList<T>
-    {
-    }
-
-    public enum Sum
-    {
-        Cost,
-        Revenue,
-        SellPrice
     }
 }
